@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Text;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WinFormsApp4
+{
+    public partial class form8 : Form
+    {
+        public string kullanici_adi;
+        public form8()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                button1.Enabled = false;
+            }
+            else
+            {
+
+                button1.Enabled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        { 
+           
+                
+             //  List<dynamic> bos1 = new List<dynamic>();
+             //   List<dynamic> bos2 = new List<dynamic>();
+            Form5 form5 = new Form5();
+            form5.kullanici_adi=textBox1.Text;
+
+            
+            form5.Show();
+            Hide();
+            
+         
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void form8_Load(object sender, EventArgs e)
+        {
+            button1.Enabled = false;
+        }
+    }
+}
